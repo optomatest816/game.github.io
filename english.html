@@ -11,12 +11,8 @@
             margin: 0;
             padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100%;
+            min-height: 100vh;
             color: white;
-        }
-        
-        html {
-            height: 100%;
         }
         
         .container {
@@ -67,10 +63,8 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 15px;
-            margin: 30px 0;
+            margin: 30px auto;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         .card {
@@ -98,7 +92,6 @@
         .card.flipped {
             background: linear-gradient(145deg, #4CAF50, #45a049);
             color: white;
-            transform: rotateY(180deg);
         }
         
         .card.matched {
@@ -171,7 +164,6 @@
             .game-board {
                 grid-template-columns: repeat(4, 1fr);
                 gap: 10px;
-                max-width: 100%;
             }
             
             .card {
@@ -181,10 +173,6 @@
             
             h1 {
                 font-size: 2rem;
-            }
-            
-            .game-stats {
-                gap: 20px;
             }
         }
         
@@ -263,41 +251,442 @@
             {english: 'Happy', chinese: '快樂'},
             {english: 'Music', chinese: '音樂'},
             {english: 'Dance', chinese: '跳舞'},
-            {english: 'Food', chinese: '食物'},
-            {english: 'Coffee', chinese: '咖啡'},
-            {english: 'Tea', chinese: '茶'},
-            {english: 'Bread', chinese: '麵包'},
-            {english: 'Milk', chinese: '牛奶'},
+            {english: 'Red', chinese: '紅色'},
+            {english: 'Blue', chinese: '藍色'},
+            {english: 'Green', chinese: '綠色'},
+            {english: 'Yellow', chinese: '黃色'},
+            {english: 'Purple', chinese: '紫色'},
+            {english: 'Pink', chinese: '粉紅色'},
+            {english: 'Horse', chinese: '馬'},
+            {english: 'Cow', chinese: '牛'},
+            {english: 'Pig', chinese: '豬'},
+            {english: 'Sheep', chinese: '羊'},
+            {english: 'Duck', chinese: '鴨'},
+            {english: 'Rabbit', chinese: '兔子'},
+            {english: 'Sky', chinese: '天空'},
+            {english: 'Cloud', chinese: '雲'},
+            {english: 'Lake', chinese: '湖'},
+            {english: 'Beach', chinese: '海灘'},
+            {english: 'Garden', chinese: '花園'},
+            {english: 'Park', chinese: '公園'},
+            {english: 'Monday', chinese: '星期一'},
+            {english: 'Tuesday', chinese: '星期二'},
+            {english: 'Wednesday', chinese: '星期三'},
+            {english: 'Thursday', chinese: '星期四'},
+            {english: 'Friday', chinese: '星期五'},
+            {english: 'Saturday', chinese: '星期六'},
+            {english: 'Sunday', chinese: '星期日'},
+            {english: 'Spring', chinese: '春天'},
+            {english: 'Summer', chinese: '夏天'},
+            {english: 'Autumn', chinese: '秋天'},
+            {english: 'Winter', chinese: '冬天'},
+            {english: 'Turtle', chinese: '烏龜'},
+            {english: 'Airplane', chinese: '飛機'},
+            {english: 'Airport', chinese: '機場'},
+            {english: 'Arm', chinese: '手臂'},
+            {english: 'Army', chinese: '軍隊'},
+            {english: 'Baby', chinese: '嬰兒'},
+            {english: 'Bag', chinese: '袋子'},
+            {english: 'Ball', chinese: '球'},
+            {english: 'Bank', chinese: '銀行'},
+            {english: 'Baseball', chinese: '棒球'},
+            {english: 'Basketball', chinese: '籃球'},
+            {english: 'Bathroom', chinese: '浴室'},
+            {english: 'Battery', chinese: '電池'},
+            {english: 'Bedroom', chinese: '臥室'},
+            {english: 'Bee', chinese: '蜜蜂'},
+            {english: 'Beef', chinese: '牛肉'},
+            {english: 'Beer', chinese: '啤酒'},
+            {english: 'Belt', chinese: '皮帶'},
+            {english: 'Bicycle', chinese: '自行車'},
+            {english: 'Boat', chinese: '船'},
+            {english: 'Body', chinese: '身體'},
+            {english: 'Bone', chinese: '骨頭'},
+            {english: 'Boss', chinese: '老闆'},
+            {english: 'Bottle', chinese: '瓶子'},
+            {english: 'Bowl', chinese: '碗'},
+            {english: 'Box', chinese: '盒子'},
+            {english: 'Boy', chinese: '男孩'},
+            {english: 'Brain', chinese: '大腦'},
+            {english: 'Brother', chinese: '兄弟'},
+            {english: 'Building', chinese: '建築物'},
+            {english: 'Bus', chinese: '公車'},
+            {english: 'Business', chinese: '生意'},
+            {english: 'Butter', chinese: '奶油'},
+            {english: 'Butterfly', chinese: '蝴蝶'},
+            {english: 'Button', chinese: '按鈕'},
+            {english: 'Cake', chinese: '蛋糕'},
+            {english: 'Camera', chinese: '相機'},
+            {english: 'Candy', chinese: '糖果'},
+            {english: 'Cap', chinese: '帽子'},
+            {english: 'Carpet', chinese: '地毯'},
+            {english: 'Carrot', chinese: '紅蘿蔔'},
+            {english: 'Castle', chinese: '城堡'},
+            {english: 'Ceiling', chinese: '天花板'},
+            {english: 'Cell', chinese: '細胞'},
+            {english: 'Century', chinese: '世紀'},
+            {english: 'Cheese', chinese: '起司'},
+            {english: 'Cherry', chinese: '櫻桃'},
+            {english: 'Chest', chinese: '胸部'},
+            {english: 'Child', chinese: '小孩'},
+            {english: 'Chocolate', chinese: '巧克力'},
+            {english: 'Church', chinese: '教堂'},
+            {english: 'Circle', chinese: '圓形'},
+            {english: 'City', chinese: '城市'},
+            {english: 'Classroom', chinese: '教室'},
+            {english: 'Coat', chinese: '外套'},
+            {english: 'Coin', chinese: '硬幣'},
+            {english: 'Company', chinese: '公司'},
+            {english: 'Contest', chinese: '比賽'},
+            {english: 'Cookie', chinese: '餅乾'},
+            {english: 'Corner', chinese: '角落'},
+            {english: 'Country', chinese: '國家'},
+            {english: 'Cousin', chinese: '表親'},
+            {english: 'Cream', chinese: '奶油'},
+            {english: 'Crown', chinese: '王冠'},
+            {english: 'Cup', chinese: '杯子'},
+            {english: 'Curtain', chinese: '窗簾'},
+            {english: 'Customer', chinese: '顧客'},
+            {english: 'Daughter', chinese: '女兒'},
+            {english: 'Deer', chinese: '鹿'},
+            {english: 'Desert', chinese: '沙漠'},
+            {english: 'Desk', chinese: '書桌'},
+            {english: 'Diamond', chinese: '鑽石'},
+            {english: 'Dictionary', chinese: '字典'},
+            {english: 'Dinner', chinese: '晚餐'},
+            {english: 'Doctor', chinese: '醫生'},
+            {english: 'Dollar', chinese: '美元'},
+            {english: 'Dolphin', chinese: '海豚'},
+            {english: 'Dragon', chinese: '龍'},
+            {english: 'Dream', chinese: '夢'},
+            {english: 'Dress', chinese: '洋裝'},
+            {english: 'Driver', chinese: '司機'},
+            {english: 'Eagle', chinese: '老鷹'},
+            {english: 'Ear', chinese: '耳朵'},
+            {english: 'Earth', chinese: '地球'},
             {english: 'Egg', chinese: '雞蛋'},
-            {english: 'Rice', chinese: '米飯'},
-            {english: 'Chicken', chinese: '雞肉'},
-            {english: 'Vegetable', chinese: '蔬菜'},
-            {english: 'Fruit', chinese: '水果'},
+            {english: 'Elbow', chinese: '手肘'},
+            {english: 'Enemy', chinese: '敵人'},
+            {english: 'Engine', chinese: '引擎'},
+            {english: 'Eye', chinese: '眼睛'},
+            {english: 'Face', chinese: '臉'},
+            {english: 'Factory', chinese: '工廠'},
+            {english: 'Fan', chinese: '風扇'},
+            {english: 'Farm', chinese: '農場'},
+            {english: 'Farmer', chinese: '農夫'},
+            {english: 'Father', chinese: '父親'},
+            {english: 'Feather', chinese: '羽毛'},
+            {english: 'Fence', chinese: '圍欄'},
+            {english: 'Finger', chinese: '手指'},
+            {english: 'Flag', chinese: '旗幟'},
+            {english: 'Floor', chinese: '地板'},
+            {english: 'Flour', chinese: '麵粉'},
+            {english: 'Fog', chinese: '霧'},
+            {english: 'Foot', chinese: '腳'},
+            {english: 'Football', chinese: '足球'},
+            {english: 'Forest', chinese: '森林'},
+            {english: 'Fork', chinese: '叉子'},
+            {english: 'Fox', chinese: '狐狸'},
+            {english: 'Frog', chinese: '青蛙'},
+            {english: 'Game', chinese: '遊戲'},
+            {english: 'Gas', chinese: '瓦斯'},
+            {english: 'Gate', chinese: '大門'},
+            {english: 'Ghost', chinese: '鬼'},
+            {english: 'Gift', chinese: '禮物'},
+            {english: 'Giraffe', chinese: '長頸鹿'},
+            {english: 'Girl', chinese: '女孩'},
+            {english: 'Glass', chinese: '玻璃杯'},
+            {english: 'Glove', chinese: '手套'},
+            {english: 'Goat', chinese: '山羊'},
+            {english: 'Gold', chinese: '黃金'},
+            {english: 'Grandfather', chinese: '祖父'},
+            {english: 'Grandmother', chinese: '祖母'},
+            {english: 'Grass', chinese: '草'},
+            {english: 'Guitar', chinese: '吉他'},
+            {english: 'Gun', chinese: '槍'},
+            {english: 'Hair', chinese: '頭髮'},
+            {english: 'Hall', chinese: '大廳'},
+            {english: 'Hammer', chinese: '鐵鎚'},
+            {english: 'Hand', chinese: '手'},
+            {english: 'Hat', chinese: '帽子'},
+            {english: 'Head', chinese: '頭'},
+            {english: 'Heart', chinese: '心臟'},
+            {english: 'Helicopter', chinese: '直升機'},
+            {english: 'Helmet', chinese: '頭盔'},
+            {english: 'Hero', chinese: '英雄'},
+            {english: 'Hill', chinese: '小山'},
+            {english: 'Honey', chinese: '蜂蜜'},
+            {english: 'Hook', chinese: '鉤子'},
+            {english: 'Hope', chinese: '希望'},
+            {english: 'Horn', chinese: '喇叭'},
+            {english: 'Hospital', chinese: '醫院'},
+            {english: 'Hotel', chinese: '旅館'},
+            {english: 'Husband', chinese: '丈夫'},
+            {english: 'Ice', chinese: '冰'},
+            {english: 'Island', chinese: '島嶼'},
+            {english: 'Jacket', chinese: '夾克'},
+            {english: 'Jam', chinese: '果醬'},
+            {english: 'Jeans', chinese: '牛仔褲'},
+            {english: 'Jewel', chinese: '珠寶'},
+            {english: 'Job', chinese: '工作'},
+            {english: 'Juice', chinese: '果汁'},
+            {english: 'Key', chinese: '鑰匙'},
+            {english: 'King', chinese: '國王'},
+            {english: 'Kitchen', chinese: '廚房'},
+            {english: 'Kite', chinese: '風箏'},
+            {english: 'Knee', chinese: '膝蓋'},
+            {english: 'Knife', chinese: '刀子'},
+            {english: 'Ladder', chinese: '梯子'},
+            {english: 'Lady', chinese: '女士'},
+            {english: 'Lamp', chinese: '燈'},
+            {english: 'Land', chinese: '土地'},
+            {english: 'Language', chinese: '語言'},
+            {english: 'Leaf', chinese: '葉子'},
+            {english: 'Leg', chinese: '腿'},
+            {english: 'Lemon', chinese: '檸檬'},
+            {english: 'Letter', chinese: '信'},
+            {english: 'Library', chinese: '圖書館'},
+            {english: 'Lip', chinese: '嘴唇'},
+            {english: 'Lizard', chinese: '蜥蜴'},
+            {english: 'Lock', chinese: '鎖'},
+            {english: 'Lunch', chinese: '午餐'},
+            {english: 'Machine', chinese: '機器'},
+            {english: 'Magazine', chinese: '雜誌'},
+            {english: 'Mail', chinese: '郵件'},
+            {english: 'Man', chinese: '男人'},
+            {english: 'Mango', chinese: '芒果'},
+            {english: 'Map', chinese: '地圖'},
+            {english: 'Market', chinese: '市場'},
+            {english: 'Match', chinese: '比賽'},
+            {english: 'Meat', chinese: '肉'},
+            {english: 'Medicine', chinese: '藥'},
+            {english: 'Melon', chinese: '瓜'},
+            {english: 'Menu', chinese: '菜單'},
+            {english: 'Message', chinese: '訊息'},
+            {english: 'Milk', chinese: '牛奶'},
+            {english: 'Mirror', chinese: '鏡子'},
+            {english: 'Model', chinese: '模特兒'},
+            {english: 'Moment', chinese: '時刻'},
+            {english: 'Monkey', chinese: '猴子'},
+            {english: 'Monster', chinese: '怪物'},
+            {english: 'Month', chinese: '月份'},
+            {english: 'Mother', chinese: '母親'},
+            {english: 'Motorcycle', chinese: '機車'},
+            {english: 'Mouth', chinese: '嘴巴'},
+            {english: 'Movie', chinese: '電影'},
+            {english: 'Museum', chinese: '博物館'},
+            {english: 'Nail', chinese: '釘子'},
+            {english: 'Name', chinese: '名字'},
+            {english: 'Neck', chinese: '脖子'},
+            {english: 'Needle', chinese: '針'},
+            {english: 'Neighbor', chinese: '鄰居'},
+            {english: 'Nest', chinese: '巢'},
+            {english: 'Net', chinese: '網'},
+            {english: 'News', chinese: '新聞'},
+            {english: 'Newspaper', chinese: '報紙'},
+            {english: 'Noise', chinese: '噪音'},
+            {english: 'Noodle', chinese: '麵條'},
+            {english: 'Nose', chinese: '鼻子'},
+            {english: 'Notebook', chinese: '筆記本'},
+            {english: 'Number', chinese: '數字'},
+            {english: 'Nurse', chinese: '護士'},
+            {english: 'Office', chinese: '辦公室'},
             {english: 'Orange', chinese: '橘子'},
-            {english: 'Banana', chinese: '香蕉'},
-            {english: 'Grape', chinese: '葡萄'},
-            {english: 'Strawberry', chinese: '草莓'},
+            {english: 'Plate', chinese: '盤子'},
+            {english: 'Knife', chinese: '刀'},
+            {english: 'Fork', chinese: '叉'},
+            {english: 'Spoon', chinese: '湯匙'},
+            {english: 'Clock', chinese: '時鐘'},
+            {english: 'Watch', chinese: '手錶'},
             {english: 'Computer', chinese: '電腦'},
             {english: 'Phone', chinese: '電話'},
-            {english: 'Television', chinese: '電視'},
+            {english: 'Tablet', chinese: '平板'},
+            {english: 'Keyboard', chinese: '鍵盤'},
+            {english: 'Mouse', chinese: '滑鼠'},
+            {english: 'Screen', chinese: '螢幕'},
             {english: 'Chair', chinese: '椅子'},
             {english: 'Table', chinese: '桌子'},
-            {english: 'Bed', chinese: '床'},
-            {english: 'Door', chinese: '門'},
+            {english: 'Sofa', chinese: '沙發'},
             {english: 'Window', chinese: '窗戶'},
+            {english: 'Door', chinese: '門'},
+            {english: 'Roof', chinese: '屋頂'},
+            {english: 'Floor', chinese: '樓層'},
+            {english: 'Wall', chinese: '牆壁'},
+            {english: 'Light', chinese: '燈光'},
+            {english: 'Shadow', chinese: '影子'},
+            {english: 'Mirror', chinese: '鏡子'},
             {english: 'Clock', chinese: '時鐘'},
-            {english: 'Money', chinese: '錢'},
-            {english: 'Work', chinese: '工作'},
-            {english: 'Study', chinese: '學習'},
-            {english: 'Play', chinese: '玩'},
-            {english: 'Sleep', chinese: '睡覺'},
-            {english: 'Walk', chinese: '走路'},
-            {english: 'Run', chinese: '跑步'},
-            {english: 'Swim', chinese: '游泳'}
+            {english: 'Pencil', chinese: '鉛筆'},
+            {english: 'Pen', chinese: '原子筆'},
+            {english: 'Paper', chinese: '紙張'},
+            {english: 'Eraser', chinese: '橡皮擦'},
+            {english: 'Ruler', chinese: '尺'},
+            {english: 'Bag', chinese: '書包'},
+            {english: 'Notebook', chinese: '筆記本'},
+            {english: 'Glue', chinese: '膠水'},
+            {english: 'Scissors', chinese: '剪刀'},
+            {english: 'Clock', chinese: '時鐘'},
+            {english: 'Calendar', chinese: '日曆'},
+            {english: 'Brush', chinese: '刷子'},
+            {english: 'Paint', chinese: '顏料'},
+            {english: 'Picture', chinese: '圖片'},
+            {english: 'Photo', chinese: '照片'},
+            {english: 'Art', chinese: '藝術'},
+            {english: 'Artist', chinese: '藝術家'},
+            {english: 'Actor', chinese: '演員'},
+            {english: 'Actress', chinese: '女演員'},
+            {english: 'Singer', chinese: '歌手'},
+            {english: 'Writer', chinese: '作家'},
+            {english: 'Poet', chinese: '詩人'},
+            {english: 'Engineer', chinese: '工程師'},
+            {english: 'Scientist', chinese: '科學家'},
+            {english: 'Nurse', chinese: '護士'},
+            {english: 'Pilot', chinese: '飛行員'},
+            {english: 'Police', chinese: '警察'},
+            {english: 'Firefighter', chinese: '消防員'},
+            {english: 'Chef', chinese: '廚師'},
+            {english: 'Waiter', chinese: '服務生'},
+            {english: 'Singer', chinese: '歌手'},
+            {english: 'Driver', chinese: '司機'},
+            {english: 'Dentist', chinese: '牙醫'},
+            {english: 'Lawyer', chinese: '律師'},
+            {english: 'Judge', chinese: '法官'},
+            {english: 'Artist', chinese: '畫家'},
+            {english: 'Painter', chinese: '畫家'},
+            {english: 'Soldier', chinese: '士兵'},
+            {english: 'Tailor', chinese: '裁縫師'},
+            {english: 'Baker', chinese: '麵包師'},
+            {english: 'Butcher', chinese: '肉商'},
+            {english: 'Waitress', chinese: '女服務生'},
+            {english: 'Barber', chinese: '理髮師'},
+            {english: 'Clerk', chinese: '店員'},
+            {english: 'Cashier', chinese: '收銀員'},
+            {english: 'Farmer', chinese: '農民'},
+            {english: 'Fisherman', chinese: '漁夫'},
+            {english: 'Actor', chinese: '演員'},
+            {english: 'Singer', chinese: '歌手'},
+            {english: 'Artist', chinese: '藝術家'},
+            {english: 'Student', chinese: '學生'},
+            {english: 'Teacher', chinese: '老師'},
+            {english: 'Principal', chinese: '校長'},
+            {english: 'Coach', chinese: '教練'},
+            {english: 'Athlete', chinese: '運動員'},
+            {english: 'Runner', chinese: '跑者'},
+            {english: 'Swimmer', chinese: '游泳者'},
+            {english: 'Cyclist', chinese: '自行車手'},
+            {english: 'Player', chinese: '選手'},
+            {english: 'Singer', chinese: '歌手'},
+            {english: 'Dancer', chinese: '舞者'},
+            {english: 'Actor', chinese: '演員'},
+            {english: 'Director', chinese: '導演'},
+            {english: 'Producer', chinese: '製作人'},
+            {english: 'Camera', chinese: '相機'},
+            {english: 'Microphone', chinese: '麥克風'},
+            {english: 'Speaker', chinese: '喇叭'},
+            {english: 'Radio', chinese: '收音機'},
+            {english: 'Television', chinese: '電視'},
+            {english: 'Computer', chinese: '電腦'},
+            {english: 'Laptop', chinese: '筆電'},
+            {english: 'Tablet', chinese: '平板電腦'},
+            {english: 'Internet', chinese: '網際網路'},
+            {english: 'Website', chinese: '網站'},
+            {english: 'Email', chinese: '電子郵件'},
+            {english: 'Password', chinese: '密碼'},
+            {english: 'File', chinese: '檔案'},
+            {english: 'Folder', chinese: '資料夾'},
+            {english: 'Printer', chinese: '印表機'},
+            {english: 'Scanner', chinese: '掃描機'},
+            {english: 'Game', chinese: '遊戲'},
+            {english: 'Toy', chinese: '玩具'},
+            {english: 'Puzzle', chinese: '拼圖'},
+            {english: 'Balloon', chinese: '氣球'},
+            {english: 'Gift', chinese: '禮物'},
+            {english: 'Ticket', chinese: '票'},
+            {english: 'Map', chinese: '地圖'},
+            {english: 'Compass', chinese: '指南針'},
+            {english: 'Camera', chinese: '相機'},
+            {english: 'Trip', chinese: '旅行'},
+            {english: 'Vacation', chinese: '假期'},
+            {english: 'Journey', chinese: '旅程'},
+            {english: 'Adventure', chinese: '冒險'},
+            {english: 'Island', chinese: '島嶼'},
+            {english: 'Beach', chinese: '沙灘'},
+            {english: 'Mountain', chinese: '山脈'},
+            {english: 'Valley', chinese: '山谷'},
+            {english: 'River', chinese: '河'},
+            {english: 'Stream', chinese: '溪流'},
+            {english: 'Waterfall', chinese: '瀑布'},
+            {english: 'Cave', chinese: '洞穴'},
+            {english: 'Desert', chinese: '沙漠'},
+            {english: 'Forest', chinese: '森林'},
+            {english: 'Jungle', chinese: '叢林'},
+            {english: 'Field', chinese: '田地'},
+            {english: 'Grass', chinese: '草'},
+            {english: 'Rock', chinese: '岩石'},
+            {english: 'Sand', chinese: '沙子'},
+            {english: 'Stone', chinese: '石頭'},
+            {english: 'Cloud', chinese: '雲'},
+            {english: 'Rainbow', chinese: '彩虹'},
+            {english: 'Storm', chinese: '暴風雨'},
+            {english: 'Lightning', chinese: '閃電'},
+            {english: 'Thunder', chinese: '雷聲'},
+            {english: 'Fog', chinese: '霧氣'},
+            {english: 'Ice', chinese: '冰'},
+            {english: 'Snowflake', chinese: '雪花'},
+            {english: 'Leaf', chinese: '葉子'},
+            {english: 'Branch', chinese: '樹枝'},
+            {english: 'Root', chinese: '根'},
+            {english: 'Seed', chinese: '種子'},
+            {english: 'Fruit', chinese: '水果'},
+            {english: 'Vegetable', chinese: '蔬菜'},
+            {english: 'Bread', chinese: '麵包'},
+            {english: 'Rice', chinese: '米飯'},
+            {english: 'Soup', chinese: '湯'},
+            {english: 'Salad', chinese: '沙拉'},
+            {english: 'Cheese', chinese: '起司'},
+            {english: 'Butter', chinese: '奶油'},
+            {english: 'Sugar', chinese: '糖'},
+            {english: 'Salt', chinese: '鹽'},
+            {english: 'Pepper', chinese: '胡椒'},
+            {english: 'Oil', chinese: '油'},
+            {english: 'Tea', chinese: '茶'},
+            {english: 'Coffee', chinese: '咖啡'},
+            {english: 'Juice', chinese: '果汁'},
+            {english: 'Milk', chinese: '牛奶'},
+            {english: 'Watermelon', chinese: '西瓜'},
+            {english: 'Banana', chinese: '香蕉'},
+            {english: 'Grape', chinese: '葡萄'},
+            {english: 'Peach', chinese: '桃子'},
+            {english: 'Pear', chinese: '梨子'},
+            {english: 'Plum', chinese: '李子'},
+            {english: 'Strawberry', chinese: '草莓'},
+            {english: 'Blueberry', chinese: '藍莓'},
+            {english: 'Pineapple', chinese: '鳳梨'},
+            {english: 'Coconut', chinese: '椰子'},
+            {english: 'Avocado', chinese: '酪梨'},
+            {english: 'Tomato', chinese: '番茄'},
+            {english: 'Potato', chinese: '馬鈴薯'},
+            {english: 'Onion', chinese: '洋蔥'},
+            {english: 'Garlic', chinese: '大蒜'},
+            {english: 'Corn', chinese: '玉米'},
+            {english: 'Cucumber', chinese: '黃瓜'},
+            {english: 'Pepper', chinese: '辣椒'},
+            {english: 'Pumpkin', chinese: '南瓜'},
+            {english: 'Eggplant', chinese: '茄子'},
+            {english: 'Lettuce', chinese: '萵苣'},
+            {english: 'Spinach', chinese: '菠菜'},
+            {english: 'Broccoli', chinese: '青花菜'},
+            {english: 'Cauliflower', chinese: '花椰菜'},
+            {english: 'Mushroom', chinese: '香菇'},
+            {english: 'Chili', chinese: '辣椒'},
+            {english: 'Bean', chinese: '豆子'},
+            {english: 'Peanut', chinese: '花生'},
+            {english: 'Almond', chinese: '杏仁'},
+            {english: 'Walnut', chinese: '核桃'}
+
         ];
         
         let currentWordPairs = [];
-        
         let gameCards = [];
         let flippedCards = [];
         let matches = 0;
@@ -305,17 +694,14 @@
         let isProcessing = false;
         
         function selectRandomWords() {
-            // 從所有單字中隨機選擇10組
             const shuffled = [...allWordPairs];
             shuffleArray(shuffled);
             currentWordPairs = shuffled.slice(0, 10);
         }
         
         function initGame() {
-            // 選擇隨機單字
             selectRandomWords();
             
-            // 創建卡片陣列（每個單字對創建兩張卡片）
             gameCards = [];
             currentWordPairs.forEach((pair, index) => {
                 gameCards.push({
@@ -392,7 +778,6 @@
             const cardElements = document.querySelectorAll('.card');
             
             if (firstCard.pairId === secondCard.pairId && firstCard.type !== secondCard.type) {
-                // 配對成功
                 firstCard.matched = true;
                 secondCard.matched = true;
                 matches++;
@@ -413,7 +798,6 @@
                     }, 500);
                 }
             } else {
-                // 配對失敗
                 cardElements[firstIndex].classList.remove('flipped');
                 cardElements[secondIndex].classList.remove('flipped');
                 cardElements[firstIndex].classList.add('wrong');
@@ -456,10 +840,8 @@
             flippedCards = [];
             isProcessing = false;
             
-            // 重新選擇隨機單字
             selectRandomWords();
             
-            // 重新創建卡片
             gameCards = [];
             currentWordPairs.forEach((pair, index) => {
                 gameCards.push({
@@ -492,8 +874,7 @@
             showMessage('卡片重新排列完成！');
         }
         
-        // 初始化遊戲
         initGame();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'991df32647a2843a',t:'MTc2MTAyMDI5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
